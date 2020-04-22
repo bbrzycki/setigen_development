@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pkl
+gnuradio_test
+*h5
+*fil
+
 
 # C extensions
 *.so
