@@ -1,0 +1,1 @@
+Can check some of the refactoring in setigen regarding Frame and 2D numpy arrays as inputs.

@@ -1,0 +1,15 @@
+02_closed_form_chirp_spectrum.ipynb
+
+From https://en.wikipedia.org/wiki/Chirp_spectrum#Linear_chirp,
+adapt derivation to write analytical chirp spectrum. Wrote a 
+tutorial in setigen/jupyter-notebooks/spectrogram on how to do 
+this and show it out.
+
+Looks decent but obviously only covers linearly drifting cosine signals.
+
+Experiment with numerical estimation of drifting for extended signals.
+Made branch `doppler_smearing` in setigen to test. Added parameter `num_smear` for now, 
+maybe should change since it's a bit weird. At this point it basically adds that many copies at equal intervals between path f_center values, and divides out by num_smear. This way, drifting frequency values will naturally be attenuated without having to estimate how wide signals really are.
+
+Added unit_drift_rate attribute to frame, for convenience.
+
