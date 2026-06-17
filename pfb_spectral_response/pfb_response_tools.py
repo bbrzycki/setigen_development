@@ -89,13 +89,17 @@ def make_backend(
     seed: int,
     noise: bool,
     tone_bin: int | None = None,
+    tone_frequency_hz: float | None = None,
     tone_coarse_offset: int = 0,
     tone_level: float = 0.005,
+    drift_rate_hz_s: float = 0.0,
     num_chans: int | None = None,
 ) -> stg.voltage.RawVoltageBackend:
     """Build a small voltage backend for one reproducible response experiment."""
     if num_chans is None:
         num_chans = config.num_chans
+    if tone_bin is not None and tone_frequency_hz is not None:
+        raise ValueError("Specify either tone_bin or tone_frequency_hz, not both.")
 
     antenna = stg.voltage.Antenna(
         sample_rate=config.sample_rate,
@@ -107,14 +111,16 @@ def make_backend(
     for stream in antenna.streams:
         if noise:
             stream.add_noise(v_mean=0, v_std=1)
-        if tone_bin is not None:
-            stream.add_constant_signal(
-                f_start=fine_bin_frequency(
+        if tone_bin is not None or tone_frequency_hz is not None:
+            if tone_frequency_hz is None:
+                tone_frequency_hz = fine_bin_frequency(
                     config,
                     tone_bin,
                     coarse_offset=tone_coarse_offset,
-                ),
-                drift_rate=0,
+                )
+            stream.add_constant_signal(
+                f_start=tone_frequency_hz,
+                drift_rate=drift_rate_hz_s,
                 level=tone_level,
             )
 
@@ -140,8 +146,10 @@ def run_spectrogram(
     seed: int,
     noise: bool,
     tone_bin: int | None = None,
+    tone_frequency_hz: float | None = None,
     tone_coarse_offset: int = 0,
     tone_level: float = 0.005,
+    drift_rate_hz_s: float = 0.0,
     num_chans: int | None = None,
     num_blocks: int = 1,
     digitize: bool = False,
@@ -155,8 +163,10 @@ def run_spectrogram(
         seed=seed,
         noise=noise,
         tone_bin=tone_bin,
+        tone_frequency_hz=tone_frequency_hz,
         tone_coarse_offset=tone_coarse_offset,
         tone_level=tone_level,
+        drift_rate_hz_s=drift_rate_hz_s,
         num_chans=num_chans,
     )
     spec = stg.voltage.VoltageSpectrogramSpec(

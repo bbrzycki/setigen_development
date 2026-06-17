@@ -81,6 +81,21 @@ original voltage amplitude do not have the same detected spectrogram intensity.
 The correction must be tied to the detector aperture we actually use: peak
 channel, local final-frequency aperture, or dedrifted path aperture.
 
+The follow-up transfer-function model in
+`05_transfer_function_model_validation.ipynb` constructs separate numerical
+responses for coherent tone transfer and stochastic noise baseline directly from
+the implemented PFB coefficients. In the current voltage-simulation validation:
+
+- exact-bin zero-drift tone predictions match clean voltage simulations to a
+  maximum relative error of about `2e-5`
+- off-bin tone/leakage predictions match clean voltage simulations to about
+  `2e-5`
+- finite noise simulations match the aliased noise response at the few-percent
+  residual-RMS level after fitting one scale factor
+- the first dedrift-path predictor is useful for modest drift but misses the
+  highest tested slope by about `0.19` in relative SNR proxy, indicating that
+  the next model term should be an exact within-FFT chirp kernel
+
 ## Notebooks
 
 1. `01_ideal_pfb_response.ipynb`
@@ -100,6 +115,10 @@ channel, local final-frequency aperture, or dedrifted path aperture.
    PFB bandpass for a fixed original voltage tone, with dense sampling near the
    coarse-channel edges.
 
+5. `05_transfer_function_model_validation.ipynb`
+   Derives and validates a transfer-function model for signal intensity, noise
+   baseline, local SNR proxy, off-bin leakage, and dedrift-path behavior.
+
 ## Report Artifacts
 
 - `pfb_response_report.tex` contains the LaTeX report source.
@@ -107,6 +126,11 @@ channel, local final-frequency aperture, or dedrifted path aperture.
   environment with Tectonic.
 - `response_experiments.py` reproduces the derivation checks, figures, and
   `response_experiment_results.json`.
+- `pfb_transfer_model.py` contains the analytic/numerical transfer-function
+  helpers for coherent tone response, aliased noise response, fine FFT leakage,
+  flattened-channel prediction, and dedrift-path prediction.
+- `transfer_function_experiments.py` validates the transfer model against direct
+  voltage simulations and writes `transfer_function_results.json`.
 - `figures/` contains the generated transfer-function and modeled-excess plots.
 - `render_report_pdf.py` is a Matplotlib fallback renderer for machines that do
   not have a working TeX engine; it writes `pfb_response_report_fallback.pdf`.
@@ -129,6 +153,7 @@ Reproduce the report experiments and render the PDF with:
 
 ```bash
 MPLCONFIGDIR=/tmp/matplotlib-seti conda run -n seti python response_experiments.py
+MPLCONFIGDIR=/tmp/matplotlib-seti conda run -n seti python transfer_function_experiments.py
 conda run -n seti tectonic --only-cached pfb_response_report.tex
 ```
 

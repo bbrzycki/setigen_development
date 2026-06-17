@@ -1,0 +1,596 @@
+{
+  "config": {
+    "sample_rate_hz": 64000000.0,
+    "num_taps": 8,
+    "num_branches": 64,
+    "fftlength": 256,
+    "integration_factor": 1,
+    "coarse_channel_bw_hz": 1000000.0,
+    "fine_channel_bw_hz": 3906.25,
+    "dt_s": 0.000256,
+    "spectra_factor": 32,
+    "num_chans": 3,
+    "target_coarse_offset": 1
+  },
+  "exact_bin_signal_validation": {
+    "bins": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      96,
+      128,
+      160,
+      192,
+      224,
+      240,
+      248,
+      252,
+      254,
+      255
+    ],
+    "reference_peak_power": 104.85938262939453,
+    "reference_aperture_power": 104.85938262939453,
+    "rows": [
+      {
+        "fine_bin": 0,
+        "coordinate": 0.5,
+        "offset_khz": -500.0,
+        "target_index": 256,
+        "actual_peak_rel": 0.25036776065826416,
+        "predicted_peak_rel": 0.25036195906041403,
+        "actual_aperture_rel": 0.25036777521514825,
+        "predicted_aperture_rel": 0.25036195906041403,
+        "actual_coarse_sum_rel": 0.5007372498512268,
+        "predicted_coarse_sum_rel": 0.5007240989199344,
+        "support_max_abs_error": 7.321516291902697e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 1,
+        "coordinate": 0.50390625,
+        "offset_khz": -496.09375,
+        "target_index": 257,
+        "actual_peak_rel": 0.2675454616546631,
+        "predicted_peak_rel": 0.26754929176982944,
+        "actual_aperture_rel": 0.26754547341632196,
+        "predicted_aperture_rel": 0.26754929176982944,
+        "actual_coarse_sum_rel": 0.501294732093811,
+        "predicted_coarse_sum_rel": 0.5013032252662207,
+        "support_max_abs_error": 4.692332979255864e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 2,
+        "coordinate": 0.5078125,
+        "offset_khz": -492.1875,
+        "target_index": 258,
+        "actual_peak_rel": 0.28528347611427307,
+        "predicted_peak_rel": 0.2852888156426657,
+        "actual_aperture_rel": 0.28528348358779226,
+        "predicted_aperture_rel": 0.2852888156426657,
+        "actual_coarse_sum_rel": 0.5030278563499451,
+        "predicted_coarse_sum_rel": 0.5030370061184367,
+        "support_max_abs_error": 5.339528392656057e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 4,
+        "coordinate": 0.515625,
+        "offset_khz": -484.375,
+        "target_index": 260,
+        "actual_peak_rel": 0.32229316234588623,
+        "predicted_peak_rel": 0.3222993253273557,
+        "actual_aperture_rel": 0.32229317696305093,
+        "predicted_aperture_rel": 0.3222993253273557,
+        "actual_coarse_sum_rel": 0.5099093317985535,
+        "predicted_coarse_sum_rel": 0.5099184405544589,
+        "support_max_abs_error": 6.162981469493012e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 8,
+        "coordinate": 0.53125,
+        "offset_khz": -468.75,
+        "target_index": 264,
+        "actual_peak_rel": 0.4013845920562744,
+        "predicted_peak_rel": 0.4013920114930047,
+        "actual_aperture_rel": 0.40138458391943205,
+        "predicted_aperture_rel": 0.4013920114930047,
+        "actual_coarse_sum_rel": 0.5365923047065735,
+        "predicted_coarse_sum_rel": 0.5366022728853569,
+        "support_max_abs_error": 7.419436730271567e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 16,
+        "coordinate": 0.5625,
+        "offset_khz": -437.5,
+        "target_index": 272,
+        "actual_peak_rel": 0.5693984627723694,
+        "predicted_peak_rel": 0.5694061486389862,
+        "actual_aperture_rel": 0.5693984682477878,
+        "predicted_aperture_rel": 0.5694061486389862,
+        "actual_coarse_sum_rel": 0.630892276763916,
+        "predicted_coarse_sum_rel": 0.6309008663612727,
+        "support_max_abs_error": 7.685866616813364e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 32,
+        "coordinate": 0.625,
+        "offset_khz": -375.0,
+        "target_index": 288,
+        "actual_peak_rel": 0.8557726740837097,
+        "predicted_peak_rel": 0.8557865991979854,
+        "actual_aperture_rel": 0.8557726720987557,
+        "predicted_aperture_rel": 0.8557865991979854,
+        "actual_coarse_sum_rel": 0.862067461013794,
+        "predicted_coarse_sum_rel": 0.8620815228777485,
+        "support_max_abs_error": 1.3925114275670225e-05,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 64,
+        "coordinate": 0.75,
+        "offset_khz": -250.0,
+        "target_index": 320,
+        "actual_peak_rel": 1.0067851543426514,
+        "predicted_peak_rel": 1.0068046622325013,
+        "actual_aperture_rel": 1.0067851516818562,
+        "predicted_aperture_rel": 1.0068046622325013,
+        "actual_coarse_sum_rel": 1.0067929029464722,
+        "predicted_coarse_sum_rel": 1.006812415155584,
+        "support_max_abs_error": 1.950788984994567e-05,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 96,
+        "coordinate": 0.875,
+        "offset_khz": -125.0,
+        "target_index": 352,
+        "actual_peak_rel": 1.0095045566558838,
+        "predicted_peak_rel": 1.0095239420572157,
+        "actual_aperture_rel": 1.0095045673683651,
+        "predicted_aperture_rel": 1.0095239420572157,
+        "actual_coarse_sum_rel": 1.009505033493042,
+        "predicted_coarse_sum_rel": 1.0095244054621224,
+        "support_max_abs_error": 1.9385401331950547e-05,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 128,
+        "coordinate": 1.0,
+        "offset_khz": 0.0,
+        "target_index": 384,
+        "actual_peak_rel": 1.0,
+        "predicted_peak_rel": 1.0,
+        "actual_aperture_rel": 1.0,
+        "predicted_aperture_rel": 1.0,
+        "actual_coarse_sum_rel": 1.0000008344650269,
+        "predicted_coarse_sum_rel": 1.0000008040782595,
+        "support_max_abs_error": 0.0,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 160,
+        "coordinate": 1.125,
+        "offset_khz": 125.0,
+        "target_index": 416,
+        "actual_peak_rel": 1.0095045566558838,
+        "predicted_peak_rel": 1.0095239420572157,
+        "actual_aperture_rel": 1.0095045673683651,
+        "predicted_aperture_rel": 1.0095239420572157,
+        "actual_coarse_sum_rel": 1.009505033493042,
+        "predicted_coarse_sum_rel": 1.0095244054621224,
+        "support_max_abs_error": 1.9385401331950547e-05,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 192,
+        "coordinate": 1.25,
+        "offset_khz": 250.0,
+        "target_index": 448,
+        "actual_peak_rel": 1.0067851543426514,
+        "predicted_peak_rel": 1.0068046622325013,
+        "actual_aperture_rel": 1.0067851516818562,
+        "predicted_aperture_rel": 1.0068046622325013,
+        "actual_coarse_sum_rel": 1.0067929029464722,
+        "predicted_coarse_sum_rel": 1.006812415155584,
+        "support_max_abs_error": 1.950788984994567e-05,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 224,
+        "coordinate": 1.375,
+        "offset_khz": 375.0,
+        "target_index": 480,
+        "actual_peak_rel": 0.8557726740837097,
+        "predicted_peak_rel": 0.8557865991979854,
+        "actual_aperture_rel": 0.8557726720987557,
+        "predicted_aperture_rel": 0.8557865991979854,
+        "actual_coarse_sum_rel": 0.862067461013794,
+        "predicted_coarse_sum_rel": 0.8620815228777485,
+        "support_max_abs_error": 1.3925114275670225e-05,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 240,
+        "coordinate": 1.4375,
+        "offset_khz": 437.5,
+        "target_index": 496,
+        "actual_peak_rel": 0.5693984627723694,
+        "predicted_peak_rel": 0.5694061486389862,
+        "actual_aperture_rel": 0.5693984682477878,
+        "predicted_aperture_rel": 0.5694061486389862,
+        "actual_coarse_sum_rel": 0.630892276763916,
+        "predicted_coarse_sum_rel": 0.6309008663612727,
+        "support_max_abs_error": 7.685866616813364e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 248,
+        "coordinate": 1.46875,
+        "offset_khz": 468.75,
+        "target_index": 504,
+        "actual_peak_rel": 0.4013845920562744,
+        "predicted_peak_rel": 0.4013920114930047,
+        "actual_aperture_rel": 0.40138458391943205,
+        "predicted_aperture_rel": 0.4013920114930047,
+        "actual_coarse_sum_rel": 0.5365923047065735,
+        "predicted_coarse_sum_rel": 0.5366022728853569,
+        "support_max_abs_error": 7.419436730271567e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 252,
+        "coordinate": 1.484375,
+        "offset_khz": 484.375,
+        "target_index": 508,
+        "actual_peak_rel": 0.32229316234588623,
+        "predicted_peak_rel": 0.3222993253273557,
+        "actual_aperture_rel": 0.32229317696305093,
+        "predicted_aperture_rel": 0.3222993253273557,
+        "actual_coarse_sum_rel": 0.5099093317985535,
+        "predicted_coarse_sum_rel": 0.5099184405544589,
+        "support_max_abs_error": 6.162981469493012e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 254,
+        "coordinate": 1.4921875,
+        "offset_khz": 492.1875,
+        "target_index": 510,
+        "actual_peak_rel": 0.28528347611427307,
+        "predicted_peak_rel": 0.2852888156426657,
+        "actual_aperture_rel": 0.28528348358779226,
+        "predicted_aperture_rel": 0.2852888156426657,
+        "actual_coarse_sum_rel": 0.5030278563499451,
+        "predicted_coarse_sum_rel": 0.5030370061184367,
+        "support_max_abs_error": 5.339528392656057e-06,
+        "time_samples": 256
+      },
+      {
+        "fine_bin": 255,
+        "coordinate": 1.49609375,
+        "offset_khz": 496.09375,
+        "target_index": 511,
+        "actual_peak_rel": 0.2675454616546631,
+        "predicted_peak_rel": 0.26754929176982944,
+        "actual_aperture_rel": 0.26754547341632196,
+        "predicted_aperture_rel": 0.26754929176982944,
+        "actual_coarse_sum_rel": 0.5012946724891663,
+        "predicted_coarse_sum_rel": 0.5013032252662207,
+        "support_max_abs_error": 4.692332979255864e-06,
+        "time_samples": 256
+      }
+    ],
+    "metrics": {
+      "peak_max_abs_error": 1.950788984994567e-05,
+      "aperture_max_abs_error": 1.9510550645085445e-05,
+      "support_max_abs_error": 1.950788984994567e-05
+    }
+  },
+  "off_bin_signal_validation": {
+    "cases": [
+      {
+        "fine_bin": 8,
+        "fraction": 0.25
+      },
+      {
+        "fine_bin": 8,
+        "fraction": 0.5
+      },
+      {
+        "fine_bin": 32,
+        "fraction": 0.25
+      },
+      {
+        "fine_bin": 32,
+        "fraction": 0.5
+      },
+      {
+        "fine_bin": 128,
+        "fraction": 0.25
+      },
+      {
+        "fine_bin": 128,
+        "fraction": 0.5
+      },
+      {
+        "fine_bin": 248,
+        "fraction": 0.25
+      },
+      {
+        "fine_bin": 248,
+        "fraction": 0.5
+      }
+    ],
+    "rows": [
+      {
+        "case_index": 0,
+        "fine_bin": 8,
+        "fraction": 0.25,
+        "coordinate": 0.5322265625,
+        "offset_khz": -467.7734375,
+        "nearest_index": 264,
+        "actual_nearest_rel": 0.32950159907341003,
+        "predicted_nearest_rel": 0.3295076235281909,
+        "actual_local_max_rel": 0.32950159907341003,
+        "predicted_local_max_rel": 0.3295076235281909,
+        "actual_aperture_rel": 0.39476436376571655,
+        "predicted_aperture_rel": 0.3947714791490779,
+        "local_max_abs_error": 6.02445478087299e-06
+      },
+      {
+        "case_index": 1,
+        "fine_bin": 8,
+        "fraction": 0.5,
+        "coordinate": 0.533203125,
+        "offset_khz": -466.796875,
+        "nearest_index": 264,
+        "actual_nearest_rel": 0.16683430969715118,
+        "predicted_nearest_rel": 0.16683729699645514,
+        "actual_local_max_rel": 0.16683432459831238,
+        "predicted_local_max_rel": 0.16683729699645514,
+        "actual_aperture_rel": 0.3875043988227844,
+        "predicted_aperture_rel": 0.38751117055152584,
+        "local_max_abs_error": 2.987299303952584e-06
+      },
+      {
+        "case_index": 2,
+        "fine_bin": 32,
+        "fraction": 0.25,
+        "coordinate": 0.6259765625,
+        "offset_khz": -374.0234375,
+        "nearest_index": 288,
+        "actual_nearest_rel": 0.6963546276092529,
+        "predicted_nearest_rel": 0.6963639212361414,
+        "actual_local_max_rel": 0.6963546276092529,
+        "predicted_local_max_rel": 0.6963639212361414,
+        "actual_aperture_rel": 0.834277331829071,
+        "predicted_aperture_rel": 0.8342890894872548,
+        "local_max_abs_error": 9.293626888506878e-06
+      },
+      {
+        "case_index": 3,
+        "fine_bin": 32,
+        "fraction": 0.5,
+        "coordinate": 0.626953125,
+        "offset_khz": -373.046875,
+        "nearest_index": 288,
+        "actual_nearest_rel": 0.34950608015060425,
+        "predicted_nearest_rel": 0.34951156952783674,
+        "actual_local_max_rel": 0.34950608015060425,
+        "predicted_local_max_rel": 0.34951156952783674,
+        "actual_aperture_rel": 0.8117937445640564,
+        "predicted_aperture_rel": 0.8118067114927592,
+        "local_max_abs_error": 5.489377232492654e-06
+      },
+      {
+        "case_index": 4,
+        "fine_bin": 128,
+        "fraction": 0.25,
+        "coordinate": 1.0009765625,
+        "offset_khz": 0.9765625,
+        "nearest_index": 384,
+        "actual_nearest_rel": 0.8105600476264954,
+        "predicted_nearest_rel": 0.8105732297534769,
+        "actual_local_max_rel": 0.8105600476264954,
+        "predicted_local_max_rel": 0.8105732297534769,
+        "actual_aperture_rel": 0.9711032509803772,
+        "predicted_aperture_rel": 0.971119239798252,
+        "local_max_abs_error": 1.3182126981536868e-05
+      },
+      {
+        "case_index": 5,
+        "fine_bin": 128,
+        "fraction": 0.5,
+        "coordinate": 1.001953125,
+        "offset_khz": 1.953125,
+        "nearest_index": 384,
+        "actual_nearest_rel": 0.40527746081352234,
+        "predicted_nearest_rel": 0.40529225545328434,
+        "actual_local_max_rel": 0.4052867889404297,
+        "predicted_local_max_rel": 0.40529225545328434,
+        "actual_aperture_rel": 0.94134920835495,
+        "predicted_aperture_rel": 0.9413679024631242,
+        "local_max_abs_error": 1.479463976200579e-05
+      },
+      {
+        "case_index": 6,
+        "fine_bin": 248,
+        "fraction": 0.25,
+        "coordinate": 1.4697265625,
+        "offset_khz": 469.7265625,
+        "nearest_index": 504,
+        "actual_nearest_rel": 0.321215957403183,
+        "predicted_nearest_rel": 0.3212205924868236,
+        "actual_local_max_rel": 0.321215957403183,
+        "predicted_local_max_rel": 0.3212205924868236,
+        "actual_aperture_rel": 0.3848373591899872,
+        "predicted_aperture_rel": 0.384843079111089,
+        "local_max_abs_error": 4.635083640625037e-06
+      },
+      {
+        "case_index": 7,
+        "fine_bin": 248,
+        "fraction": 0.5,
+        "coordinate": 1.470703125,
+        "offset_khz": 470.703125,
+        "nearest_index": 504,
+        "actual_nearest_rel": 0.15854807198047638,
+        "predicted_nearest_rel": 0.1585508032391404,
+        "actual_local_max_rel": 0.15854807198047638,
+        "predicted_local_max_rel": 0.1585508032391404,
+        "actual_aperture_rel": 0.36825796961784363,
+        "predicted_aperture_rel": 0.3682642218567554,
+        "local_max_abs_error": 2.7312586640126923e-06
+      }
+    ],
+    "metrics": {
+      "nearest_max_abs_error": 1.479463976200579e-05,
+      "local_max_abs_error": 1.479463976200579e-05,
+      "aperture_max_abs_error": 1.8694108174233115e-05
+    }
+  },
+  "noise_validation": {
+    "rows": [
+      {
+        "fftlength": 128,
+        "integration_factor": 1,
+        "df_hz": 7812.5,
+        "dt_s": 0.000128,
+        "time_samples": 1024,
+        "correlation": 0.9845782989840699,
+        "relative_residual_rms": 0.028580883953966855,
+        "fit_scale": 64.08361156502598,
+        "measured_edge_rel": 0.5039443969726562,
+        "predicted_edge_rel": 0.500723869834832,
+        "measured_center_rel": 0.9522479176521301,
+        "predicted_center_rel": 1.0
+      },
+      {
+        "fftlength": 256,
+        "integration_factor": 1,
+        "df_hz": 3906.25,
+        "dt_s": 0.000256,
+        "time_samples": 1024,
+        "correlation": 0.9842834898718543,
+        "relative_residual_rms": 0.02897990692121318,
+        "fit_scale": 63.98369130350412,
+        "measured_edge_rel": 0.5205293297767639,
+        "predicted_edge_rel": 0.500723869834832,
+        "measured_center_rel": 0.9941763877868652,
+        "predicted_center_rel": 1.0
+      },
+      {
+        "fftlength": 256,
+        "integration_factor": 4,
+        "df_hz": 3906.25,
+        "dt_s": 0.001024,
+        "time_samples": 256,
+        "correlation": 0.983192601705149,
+        "relative_residual_rms": 0.030061866454103654,
+        "fit_scale": 256.2725380001582,
+        "measured_edge_rel": 0.5317253470420837,
+        "predicted_edge_rel": 0.500723869834832,
+        "measured_center_rel": 1.0134356021881104,
+        "predicted_center_rel": 1.0
+      },
+      {
+        "fftlength": 512,
+        "integration_factor": 1,
+        "df_hz": 1953.125,
+        "dt_s": 0.000512,
+        "time_samples": 512,
+        "correlation": 0.9704524560805674,
+        "relative_residual_rms": 0.04056596494480427,
+        "fit_scale": 64.00188827608805,
+        "measured_edge_rel": 0.4890274703502655,
+        "predicted_edge_rel": 0.500723869834832,
+        "measured_center_rel": 1.0708554983139038,
+        "predicted_center_rel": 1.0
+      }
+    ]
+  },
+  "drift_validation": {
+    "config": {
+      "fftlength": 256,
+      "integration_factor": 1,
+      "df_hz": 3906.25,
+      "dt_s": 0.000256,
+      "unit_drift_hz_s": 15258789.0625
+    },
+    "rows": [
+      {
+        "slope_bins_per_row": 0.0,
+        "drift_rate_hz_s": 0.0,
+        "time_samples": 128,
+        "path_start_index": 384,
+        "path_stop_index": 384,
+        "path_unique_channels": 1,
+        "actual_path_power_rel": 1.0,
+        "predicted_path_power_rel": 1.0,
+        "actual_snr_proxy_rel": 1.0,
+        "predicted_snr_proxy_rel": 1.0
+      },
+      {
+        "slope_bins_per_row": 0.25,
+        "drift_rate_hz_s": 3814697.265625,
+        "time_samples": 128,
+        "path_start_index": 384,
+        "path_stop_index": 416,
+        "path_unique_channels": 33,
+        "actual_path_power_rel": 0.7836187194665104,
+        "predicted_path_power_rel": 0.7861004253614786,
+        "actual_snr_proxy_rel": 0.779844660547192,
+        "predicted_snr_proxy_rel": 0.7823144140678289
+      },
+      {
+        "slope_bins_per_row": 0.5,
+        "drift_rate_hz_s": 7629394.53125,
+        "time_samples": 128,
+        "path_start_index": 384,
+        "path_stop_index": 448,
+        "path_unique_channels": 65,
+        "actual_path_power_rel": 0.8051320176095177,
+        "predicted_path_power_rel": 0.8155563533333634,
+        "actual_snr_proxy_rel": 0.8002078957875495,
+        "predicted_snr_proxy_rel": 0.8105684771234258
+      },
+      {
+        "slope_bins_per_row": 1.0,
+        "drift_rate_hz_s": 15258789.0625,
+        "time_samples": 128,
+        "path_start_index": 384,
+        "path_stop_index": 511,
+        "path_unique_channels": 65,
+        "actual_path_power_rel": 0.3496713313502974,
+        "predicted_path_power_rel": 0.3590471102770889,
+        "actual_snr_proxy_rel": 0.3793989632817858,
+        "predicted_snr_proxy_rel": 0.38957183273335777
+      },
+      {
+        "slope_bins_per_row": 2.0,
+        "drift_rate_hz_s": 30517578.125,
+        "time_samples": 128,
+        "path_start_index": 385,
+        "path_stop_index": 639,
+        "path_unique_channels": 128,
+        "actual_path_power_rel": 0.7073614447983885,
+        "predicted_path_power_rel": 0.8859186263296299,
+        "actual_snr_proxy_rel": 0.7675004809943203,
+        "predicted_snr_proxy_rel": 0.9612383836153459
+      }
+    ],
+    "metrics": {
+      "snr_proxy_max_abs_error": 0.19373790262102553,
+      "path_power_max_abs_error": 0.17855718153124145
+    }
+  }
+}

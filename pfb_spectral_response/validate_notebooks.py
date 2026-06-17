@@ -14,6 +14,7 @@ NOTEBOOKS = [
     "02_noise_response_overlay.ipynb",
     "03_tone_response_and_snr.ipynb",
     "04_edge_detected_intensity.ipynb",
+    "05_transfer_function_model_validation.ipynb",
 ]
 
 
